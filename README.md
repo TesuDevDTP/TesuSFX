@@ -1,6 +1,6 @@
 <div align="center">
 
-  <img src="2. banner.pngbanner.png" alt="Tesu SFX Banner" width="100%" style="border-radius: 8px; margin-bottom: 20px;"/>
+  <img src="2. banner.png" alt="Tesu SFX Banner" width="100%" style="border-radius: 8px; margin-bottom: 20px;"/>
 
   # TESU SFX
 
