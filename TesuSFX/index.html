@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tesu SFX</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap&subset=vietnamese" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div id="app" class="app-container">
+        <div id="splashScreen" class="splash-screen">
+            <div class="splash-card">
+                <div class="splash-equalizer">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="splash-label">ĐANG TẢI</div>
+            </div>
+        </div>
+
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h2>Tesu SFX</h2>
+            </div>
+            
+            <div class="folder-list" id="folderList"></div>
+
+            <div class="sidebar-footer">
+                <button class="add-folder-btn" id="addFolderBtn"><i class="fa-solid fa-folder-plus"></i> Thư Mục</button>
+                <button class="add-file-btn" id="addFileBtn"><i class="fa-solid fa-file-audio"></i> File</button>
+            </div>
+        </aside>
+
+        <main class="main-content" id="mainContent">
+            <div class="search-bar">
+                <div class="search-bar-inner">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Tìm kiếm âm thanh..." id="searchInput">
+                </div>
+                <select id="trackSelect">
+                    <option value="0">Track Cuối</option>
+                    <option value="1">Track 1</option>
+                    <option value="2">Track 2</option>
+                    <option value="3">Track 3</option>
+                    <option value="4">Track 4</option>
+                </select>
+                <div id="trackSelectProxy" class="custom-select-wrapper" aria-hidden="true"></div>
+            </div>
+
+            <div class="item-list" id="itemList"></div>
+        </main>
+    </div>
+    
+    <footer class="bottom-bar">
+        <div class="brand"><img src="img/logo-tesu-sfx.png" alt="tesu_logo" class="logo-image"></div>
+        
+        <div class="tabs">
+            <button class="tab-btn active" id="sfxTabBtn">SoundFX</button>
+            <button class="tab-btn" id="musicTabBtn">Music</button>
+        </div>
+
+        <div class="controls">
+            <button class="control-btn" id="favFilterBtn" title="Xem Mục Yêu Thích"><i class="fa-solid fa-star"></i></button>
+            <button class="control-btn" id="volumeBtn" title="Âm Lượng"><i class="fa-solid fa-volume-high"></i></button>
+            <button class="settings-btn" id="footerSettingsBtn" title="Cài Đặt"><i class="fa-solid fa-gear"></i></button>
+        </div>
+    </footer>
+
+    <div id="infoModal" class="activation-screen hidden">
+        <div class="activation-card">
+            <img src="img/logo-tesu-sfx.png" alt="tesu_logo" class="activation-logo">
+            <div class="modal-info-panel">
+                <p class="modal-info-line"><i class="fa-solid fa-circle-info"></i> Plugin quản lý SoundFX và Music cho Premiere Pro.</p>
+                <p class="modal-info-line"><i class="fa-solid fa-wand-magic-sparkles"></i> Tối ưu quy trình, duyệt và chèn audio nhanh vào timeline.</p>
+                <p class="modal-info-line"><i class="fa-solid fa-envelope"></i> Liên hệ: <a href="#" class="external-link" data-url="mailto:tesumediaofficial@gmail.com">tesumediaofficial@gmail.com</a></p>
+                <p class="modal-info-line"><i class="fa-brands fa-facebook"></i> Facebook: <a href="#" class="external-link" data-url="https://www.facebook.com/ThanhPhat.Tesu">ThanhPhat.Tesu</a></p>
+            </div>
+            <p class="modal-version">Version 1.0.0</p>
+            <p class="modal-designed">Được thiết kế bởi <a href="#" class="external-link" data-url="mailto:tesumediaofficial@gmail.com">Tesu</a></p>
+            <button class="add-folder-btn modal-close-btn" onclick="document.getElementById('infoModal').classList.add('hidden')">Đóng Lại</button>
+        </div>
+    </div>
+
+    <script src="lib/CSInterface.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
